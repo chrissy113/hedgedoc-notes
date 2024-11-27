@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: hedgedoc
+    env: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /status
+    envVars:
+      - key: CMD_DOMAIN
+        sync: false
+      - key: CMD_SESSION_SECRET
+        generateValue: true
+    disk:
+      name: data
+      mountPath: /hedgedoc/data
+      sizeGB: 1
