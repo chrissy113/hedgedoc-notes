@@ -1,0 +1,14 @@
+{
+  "production": {
+    "db": {
+      "dialect": "sqlite",
+      "storage": "./data/notes.db"
+    },
+    "path": "/",
+    "allowAnonymous": true,
+    "allowAnonymousEdits": true,
+    "allowFreeURL": true,
+    "defaultPermission": "private",
+    "sessionSecret": "change-this-secret"
+  }
+}
