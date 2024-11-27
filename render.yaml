@@ -4,12 +4,11 @@ services:
     env: docker
     dockerfilePath: ./Dockerfile
     healthCheckPath: /status
+    plan: free
     envVars:
-      - key: CMD_DOMAIN
-        sync: false
-      - key: CMD_SESSION_SECRET
-        generateValue: true
+      - key: PORT
+        value: 3000
     disk:
-      name: data
+      name: hedgedoc-data
       mountPath: /hedgedoc/data
       sizeGB: 1
